@@ -1,0 +1,846 @@
+/* ==========================================================================
+   WISER Method Template Design System
+   Version: 1.0
+   
+   Shared CSS for all WISER book templates.
+   Color scheme optimized for white/print pages.
+   ========================================================================== */
+
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Brand Colors (white-page variant) */
+  --color-dark:        #404040;
+  --color-light:       #f9f9f4;
+  --color-primary:     #15665c;
+  --color-accent:      #e56b00;
+  --color-white:       #ffffff;
+
+  /* Derived Colors */
+  --color-primary-10:  rgba(21, 102, 92, 0.10);
+  --color-primary-20:  rgba(21, 102, 92, 0.20);
+  --color-accent-10:   rgba(229, 107, 0, 0.10);
+  --color-accent-20:   rgba(229, 107, 0, 0.20);
+  --color-border:      #d4d4d4;
+  --color-border-light:#e8e8e8;
+  --color-muted:       #737373;
+  --color-subtle:      #a3a3a3;
+
+  /* Typography */
+  --font-family:       'Raleway', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:  700;
+
+  /* Font Sizes (print-optimized) */
+  --font-size-xs:      9pt;
+  --font-size-sm:      10pt;
+  --font-size-base:    11pt;
+  --font-size-md:      12pt;
+  --font-size-lg:      14pt;
+  --font-size-xl:      18pt;
+  --font-size-2xl:     22pt;
+
+  /* Spacing */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Layout */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --border-width: 1px;
+  --border-width-thick: 2px;
+}
+
+/* ---------- Page Setup ---------- */
+@page {
+  size: letter;
+  margin: 0.75in 0.75in 0.75in 0.85in;
+}
+
+@page :first {
+  margin-top: 0;
+}
+
+@page landscape {
+  size: letter landscape;
+  margin: 0.75in;
+}
+
+/* ---------- Base Reset ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Body ---------- */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+  color: var(--color-dark);
+  background: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.landscape {
+  page: landscape;
+}
+
+/* ---------- Page Container ---------- */
+.page {
+  max-width: 7in;
+  margin: 0 auto;
+  padding: var(--space-6) 0;
+}
+
+.page.landscape {
+  max-width: 9.5in;
+}
+
+/* ---------- Header ---------- */
+.template-header {
+  margin-bottom: var(--space-8);
+  page-break-inside: avoid;
+}
+
+.template-header__bar {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.template-header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.template-header__logo img {
+  height: 32px;
+  width: auto;
+}
+
+.template-header__logo-text {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.template-header__title-area {
+  text-align: right;
+}
+
+.template-header__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+.template-header__subtitle {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  opacity: 0.8;
+  margin-top: var(--space-1);
+}
+
+.template-header__meta {
+  background: var(--color-light);
+  padding: var(--space-4) var(--space-6);
+  border: var(--border-width) solid var(--color-border-light);
+  border-top: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.template-header__meta-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+  min-width: 140px;
+}
+
+.template-header__meta-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.template-header__meta-value {
+  font-size: var(--font-size-base);
+  color: var(--color-dark);
+  border-bottom: var(--border-width) dotted var(--color-border);
+  padding-bottom: var(--space-1);
+  min-height: 1.5em;
+}
+
+/* ---------- Footer ---------- */
+/* In-HTML footer for browser preview. Hidden in print because
+   Puppeteer injects a consistent footer with page numbers on every page. */
+.template-footer {
+  margin-top: var(--space-10);
+  padding-top: var(--space-4);
+  border-top: var(--border-width) solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-muted);
+  page-break-inside: avoid;
+}
+
+.template-footer__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.template-footer__brand img {
+  height: 18px;
+  width: auto;
+  opacity: 0.6;
+}
+
+.template-footer__url {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+}
+
+.template-footer__page {
+  font-weight: var(--font-weight-medium);
+}
+
+/* ---------- Typography ---------- */
+h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: var(--space-6);
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: 1.3;
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: var(--border-width-thick) solid var(--color-primary);
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark);
+  line-height: 1.3;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+  page-break-after: avoid;
+}
+
+h4 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark);
+  line-height: 1.4;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+p {
+  margin-bottom: var(--space-3);
+}
+
+p.intro {
+  font-size: var(--font-size-md);
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+
+strong {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ---------- Section ---------- */
+.section {
+  margin-bottom: var(--space-8);
+  page-break-inside: avoid;
+}
+
+.section--bordered {
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.section--shaded {
+  background: var(--color-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.section--accent {
+  border-left: var(--border-width-thick) solid var(--color-accent);
+  padding-left: var(--space-5);
+}
+
+/* ---------- Tables ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-sm);
+  page-break-inside: avoid;
+}
+
+thead th {
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.02em;
+}
+
+thead th:first-child {
+  border-radius: var(--radius-md) 0 0 0;
+}
+
+thead th:last-child {
+  border-radius: 0 var(--radius-md) 0 0;
+}
+
+tbody td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: var(--border-width) solid var(--color-border-light);
+  vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--color-light);
+}
+
+tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 var(--radius-md);
+}
+
+tbody tr:last-child td:last-child {
+  border-radius: 0 0 var(--radius-md) 0;
+}
+
+/* Table with write-in rows */
+table.writable tbody td {
+  min-height: 2em;
+  border-bottom: var(--border-width) dotted var(--color-border);
+}
+
+/* Compact table variant */
+table.compact {
+  font-size: var(--font-size-xs);
+}
+
+table.compact thead th,
+table.compact tbody td {
+  padding: var(--space-2) var(--space-3);
+}
+
+/* ---------- Form Fields ---------- */
+.field {
+  margin-bottom: var(--space-4);
+}
+
+.field__label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.field__input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: var(--border-width) dotted var(--color-border);
+  padding: var(--space-2) 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-dark);
+  min-height: 1.8em;
+}
+
+.field__input--tall {
+  min-height: 4em;
+  border: var(--border-width) solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+}
+
+.field__hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-subtle);
+  font-style: italic;
+  margin-top: var(--space-1);
+}
+
+/* Inline fields (two or more on a row) */
+.field-row {
+  display: flex;
+  gap: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.field-row .field {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* ---------- Checklist ---------- */
+.checklist {
+  list-style: none;
+  margin-bottom: var(--space-6);
+}
+
+.checklist li {
+  position: relative;
+  padding: var(--space-2) 0 var(--space-2) var(--space-8);
+  border-bottom: var(--border-width) solid var(--color-border-light);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+.checklist li::before {
+  content: '';
+  position: absolute;
+  left: var(--space-2);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border: var(--border-width-thick) solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+}
+
+.checklist li.checked::before {
+  background: var(--color-primary);
+}
+
+.checklist--numbered {
+  counter-reset: checklist;
+}
+
+.checklist--numbered li {
+  padding-left: var(--space-10);
+}
+
+.checklist--numbered li::before {
+  display: none;
+}
+
+.checklist--numbered li::after {
+  content: counter(checklist);
+  counter-increment: checklist;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ---------- Info Boxes ---------- */
+.info-box {
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-sm);
+  page-break-inside: avoid;
+}
+
+.info-box__title {
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.info-box--tip {
+  background: var(--color-primary-10);
+  border-left: 3px solid var(--color-primary);
+}
+
+.info-box--tip .info-box__title {
+  color: var(--color-primary);
+}
+
+.info-box--warning {
+  background: var(--color-accent-10);
+  border-left: 3px solid var(--color-accent);
+}
+
+.info-box--warning .info-box__title {
+  color: var(--color-accent);
+}
+
+.info-box--note {
+  background: var(--color-light);
+  border-left: 3px solid var(--color-border);
+}
+
+/* ---------- Numbered Steps ---------- */
+.steps {
+  counter-reset: steps;
+  list-style: none;
+  margin-bottom: var(--space-6);
+}
+
+.steps li {
+  position: relative;
+  padding: var(--space-4) 0 var(--space-4) var(--space-12);
+  border-bottom: var(--border-width) solid var(--color-border-light);
+}
+
+.steps li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  position: absolute;
+  left: 0;
+  top: var(--space-4);
+  width: 32px;
+  height: 32px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.steps li strong {
+  display: block;
+  font-size: var(--font-size-base);
+  color: var(--color-dark);
+  margin-bottom: var(--space-1);
+}
+
+.steps li p {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* ---------- Scoring / Rating ---------- */
+.rating-scale {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.rating-scale__item {
+  width: 24px;
+  height: 24px;
+  border: var(--border-width-thick) solid var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.rating-scale__label {
+  font-size: var(--font-size-xs);
+  color: var(--color-muted);
+  margin-left: var(--space-2);
+}
+
+/* ---------- Two Column Layout ---------- */
+.columns {
+  display: flex;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.columns > .col {
+  flex: 1;
+}
+
+.columns > .col--narrow {
+  flex: 0 0 35%;
+}
+
+.columns > .col--wide {
+  flex: 0 0 65%;
+}
+
+/* ---------- Repeating Entry ---------- */
+/* Entries are designed to break cleanly across pages. Instead of a 
+   full border box (which looks broken when split), entries use a 
+   strong top border + left accent so mid-page splits look intentional. */
+.entry {
+  border-top: var(--border-width-thick) solid var(--color-primary);
+  border-left: 3px solid var(--color-primary-20);
+  padding: var(--space-4) var(--space-5) var(--space-5);
+  margin-bottom: var(--space-5);
+  /* Deliberately NO page-break-inside: avoid. Entries are large 
+     and must be allowed to split across pages. */
+}
+
+.entry__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  page-break-inside: avoid;
+  page-break-after: avoid;
+}
+
+.entry__number {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* When entry has no .entry__header wrapper, keep legacy margin */
+.entry > .entry__number:first-child {
+  margin-bottom: var(--space-3);
+}
+
+/* ---------- Badge / Tag ---------- */
+.badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 100px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.02em;
+}
+
+.badge--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.badge--accent {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.badge--outline {
+  background: transparent;
+  border: var(--border-width) solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.badge--high {
+  background: #dc2626;
+  color: var(--color-white);
+}
+
+.badge--medium {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.badge--low {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* ---------- Separator ---------- */
+.separator {
+  border: none;
+  border-top: var(--border-width) solid var(--color-border);
+  margin: var(--space-6) 0;
+}
+
+.separator--thick {
+  border-top-width: var(--border-width-thick);
+  border-color: var(--color-primary);
+}
+
+/* ---------- Utility Classes ---------- */
+.text-primary  { color: var(--color-primary); }
+.text-accent   { color: var(--color-accent); }
+.text-muted    { color: var(--color-muted); }
+.text-dark     { color: var(--color-dark); }
+.text-center   { text-align: center; }
+.text-right    { text-align: right; }
+.text-sm       { font-size: var(--font-size-sm); }
+.text-xs       { font-size: var(--font-size-xs); }
+.font-bold     { font-weight: var(--font-weight-bold); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-medium   { font-weight: var(--font-weight-medium); }
+
+.mt-0  { margin-top: 0; }
+.mt-2  { margin-top: var(--space-2); }
+.mt-4  { margin-top: var(--space-4); }
+.mt-6  { margin-top: var(--space-6); }
+.mt-8  { margin-top: var(--space-8); }
+.mb-0  { margin-bottom: 0; }
+.mb-2  { margin-bottom: var(--space-2); }
+.mb-4  { margin-bottom: var(--space-4); }
+.mb-6  { margin-bottom: var(--space-6); }
+
+.pb-0  { padding-bottom: 0; }
+.no-border { border: none; }
+
+.page-break {
+  page-break-before: always;
+}
+
+.no-break {
+  page-break-inside: avoid;
+}
+
+/* ---------- Print / Pagination ---------- */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Hide the in-HTML footer; Puppeteer injects a per-page footer
+     with page numbers, logo, and URL on every page. */
+  .template-footer {
+    display: none !important;
+  }
+
+  /* Force exact colors on branded elements */
+  .template-header__bar,
+  thead th,
+  .info-box,
+  .entry__number,
+  .badge,
+  .steps li::before,
+  .checklist--numbered li::after,
+  .ref-item {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* --- Pagination strategy ---
+     Philosophy: only protect SMALL atomic elements from splitting.
+     Large compound elements (entries, sections, tables) MUST be allowed
+     to break so content flows naturally without dead whitespace. */
+
+  /* SMALL elements: keep together */
+  .field,
+  .field-row,
+  .template-header,
+  .ref-item,
+  .entry__header {
+    page-break-inside: avoid;
+  }
+
+  /* Headings: never orphan at bottom of page */
+  h2, h3, h4,
+  .entry__number {
+    page-break-after: avoid;
+  }
+
+  /* LARGE elements: explicitly allow breaking */
+  .entry,
+  .section,
+  table,
+  tbody {
+    page-break-inside: auto;
+  }
+
+  /* Info boxes: only protect if short (single paragraph).
+     Long info boxes can break. */
+  .info-box {
+    page-break-inside: avoid;
+  }
+
+  /* Table headers repeat on every page */
+  thead {
+    display: table-header-group;
+  }
+
+  /* Orphan/widow control */
+  p, li {
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* Explicit page break utility */
+  .page-break {
+    page-break-before: always;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    border: none;
+  }
+}

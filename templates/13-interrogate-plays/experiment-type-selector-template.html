@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WISER Reference Card: Experiment Type Selector</title>
+  <link rel="stylesheet" href="../template-templates/shared/wiser-template.css">
+  <style>
+    /* Reference card: compact, information-dense, single page */
+    @page { size: letter; margin: 0.5in; }
+
+    body { font-size: var(--font-size-sm); line-height: 1.4; }
+
+    .page { max-width: 7.5in; }
+
+    .template-header__bar {
+      padding: var(--space-3) var(--space-4);
+    }
+
+    .template-header {
+      margin-bottom: var(--space-4);
+    }
+
+    h2 {
+      font-size: var(--font-size-md);
+      margin-top: var(--space-3);
+      margin-bottom: var(--space-2);
+      padding-bottom: var(--space-1);
+    }
+
+    .section { margin-bottom: var(--space-3); }
+
+    /* Dense two-column layout */
+    .ref-columns {
+      display: flex;
+      gap: var(--space-4);
+    }
+
+    .ref-columns > .ref-col {
+      flex: 1;
+    }
+
+    /* Quick reference items */
+    .ref-item {
+      margin-bottom: var(--space-2);
+      padding: var(--space-2) var(--space-3);
+      background: var(--color-light);
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--color-primary);
+    }
+
+    .ref-item__title {
+      font-weight: var(--font-weight-bold);
+      font-size: var(--font-size-sm);
+      color: var(--color-primary);
+      margin-bottom: 2px;
+    }
+
+    .ref-item__body {
+      font-size: var(--font-size-xs);
+      color: var(--color-dark);
+      line-height: 1.35;
+    }
+
+    .ref-item__meta {
+      font-size: 8pt;
+      color: var(--color-muted);
+      margin-top: 2px;
+    }
+
+    /* Compact table */
+    table { font-size: var(--font-size-xs); }
+    thead th { padding: var(--space-1) var(--space-2); font-size: 8pt; }
+    tbody td { padding: var(--space-1) var(--space-2); font-size: 8pt; }
+
+    /* Decision flow */
+    .decision-flow {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .decision-step {
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-xs);
+    }
+
+    .decision-step--question {
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-weight: var(--font-weight-semibold);
+      text-align: center;
+    }
+
+    .decision-step--answer {
+      background: var(--color-light);
+      border-left: 3px solid var(--color-accent);
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-2);
+    }
+
+    .decision-step__label {
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-accent);
+      flex-shrink: 0;
+    }
+
+    .decision-step__result {
+      color: var(--color-dark);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ===== HEADER ===== -->
+    <header class="template-header">
+      <div class="template-header__bar">
+        <div class="template-header__logo">
+          <img src="../template-templates/shared/assets/wiser-owl.png" alt="WISER">
+          <span class="template-header__logo-text">WISER Method</span>
+        </div>
+        <div class="template-header__title-area">
+          <div class="template-header__title">Experiment Type Selector</div>
+          <div class="template-header__subtitle">Chapter 13 . Interrogate Phase</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT (Two columns) ===== -->
+    <div class="ref-columns">
+      <div class="ref-col">
+
+        <h2>Decision Tree</h2>
+
+        <div class="decision-flow">
+          <div class="decision-step decision-step--question">What type of assumption are you testing?</div>
+
+          <div class="decision-step decision-step--answer">
+            <span class="decision-step__label">User behavior</span>
+            <span class="decision-step__result">Wizard of Oz or Paper Prototype</span>
+          </div>
+
+          <div class="decision-step decision-step--answer">
+            <span class="decision-step__label">Technical feasibility</span>
+            <span class="decision-step__result">Integration Spike or Data Quality Audit</span>
+          </div>
+
+          <div class="decision-step decision-step--answer">
+            <span class="decision-step__label">Organizational alignment</span>
+            <span class="decision-step__result">Stakeholder Alignment Check</span>
+          </div>
+
+          <div class="decision-step decision-step--answer">
+            <span class="decision-step__label">Solution accuracy</span>
+            <span class="decision-step__result">Shadow Mode</span>
+          </div>
+
+          <div class="decision-step decision-step--question" style="margin-top: var(--space-2);">Is the system deployed?</div>
+
+          <div class="decision-step decision-step--answer">
+            <span class="decision-step__label">Yes, in production</span>
+            <span class="decision-step__result">Shadow Mode (parallel comparison)</span>
+          </div>
+
+          <div class="decision-step decision-step--answer">
+            <span class="decision-step__label">No, pre-build</span>
+            <span class="decision-step__result">Wizard of Oz, Paper Prototype, or Spike</span>
+          </div>
+        </div>
+
+        <h2>Selection Steps</h2>
+
+        <ol class="checklist checklist--numbered" style="margin-bottom: var(--space-3);">
+          <li style="font-size: var(--font-size-xs); padding-left: var(--space-8);">Identify the assumption category</li>
+          <li style="font-size: var(--font-size-xs); padding-left: var(--space-8);">Match to experiment type using the table</li>
+          <li style="font-size: var(--font-size-xs); padding-left: var(--space-8);">Check duration against constraints</li>
+          <li style="font-size: var(--font-size-xs); padding-left: var(--space-8);">Create Experiment Log entry before starting</li>
+        </ol>
+
+      </div>
+
+      <div class="ref-col">
+
+        <h2>Six Experiment Types</h2>
+
+        <div class="ref-item">
+          <div class="ref-item__title">Wizard of Oz</div>
+          <div class="ref-item__body">Human performs the "AI" function behind the scenes. Tests whether users want the capability at all.</div>
+          <div class="ref-item__meta">Best for: User assumptions. Duration: 1-2 weeks. Requires: Human performer.</div>
+        </div>
+
+        <div class="ref-item">
+          <div class="ref-item__title">Data Quality Audit</div>
+          <div class="ref-item__body">Sample real data and check against requirements. Reveals gaps before training or integration.</div>
+          <div class="ref-item__meta">Best for: Technical assumptions. Duration: 2-5 days. Min sample: 100 records or 10%.</div>
+        </div>
+
+        <div class="ref-item">
+          <div class="ref-item__title">Integration Spike</div>
+          <div class="ref-item__body">Build the smallest possible working connection to external systems. APIs have undocumented behaviors.</div>
+          <div class="ref-item__meta">Best for: Technical assumptions. Duration: 3-5 days. Use sandbox credentials.</div>
+        </div>
+
+        <div class="ref-item">
+          <div class="ref-item__title">Paper Prototype</div>
+          <div class="ref-item__body">Sketch the workflow and walk users through it manually. Tests if users understand the flow.</div>
+          <div class="ref-item__meta">Best for: User/Solution assumptions. Duration: 1-3 days. Min users: 3-5.</div>
+        </div>
+
+        <div class="ref-item">
+          <div class="ref-item__title">Shadow Mode</div>
+          <div class="ref-item__body">AI runs in parallel while humans make actual decisions. Compare outputs to measure accuracy without risk.</div>
+          <div class="ref-item__meta">Best for: Solution assumptions. Duration: 2-4 weeks. Requires: Deployed system.</div>
+        </div>
+
+        <div class="ref-item">
+          <div class="ref-item__title">Stakeholder Alignment Check</div>
+          <div class="ref-item__body">Interview stakeholders separately and compare answers. Surfaces hidden disagreements on objectives.</div>
+          <div class="ref-item__meta">Best for: Organizational assumptions. Duration: 1-2 days.</div>
+        </div>
+
+        <div class="info-box info-box--warning" style="padding: var(--space-2) var(--space-3); margin-bottom: 0;">
+          <div class="info-box__title" style="font-size: 8pt;">Common Pitfalls</div>
+          <p style="font-size: 8pt; margin: 0;">Using Shadow Mode when Wizard of Oz would be faster. Skipping prerequisites (WoZ and Shadow need human participants). Running a Data Quality Audit with only 10 records.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="template-footer mt-4">
+      <div class="template-footer__brand">
+        <img src="../template-templates/shared/assets/wiser-logo.png" alt="WISER">
+        <span>WISER Method</span>
+      </div>
+      <a href="https://wisermethod.com/templates" class="template-footer__url">wisermethod.com/templates</a>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+WISER Method Open Source Project
+Copyright 2026 Anthony Franco and Robb Wilson
+Published by First Strategy, LLC
+
+WHAT IS LICENSED
+
+The following materials in this repository are licensed under the
+Creative Commons Attribution-ShareAlike 4.0 International License
+(CC BY-SA 4.0). See the LICENSE file for full terms.
+
+  - The WISER Method document (method/)
+  - Practitioner templates: description specs, HTML sources, PDFs,
+    CSS design system, and base template files (templates/)
+
+You are free to use, share, and adapt these materials for any purpose,
+including commercial use, provided you give appropriate credit and
+distribute any adapted material under the same license.
+
+ATTRIBUTION REQUIREMENT
+
+When using or adapting these materials, you must provide attribution.
+Acceptable attribution:
+
+  "Based on the WISER Method by Anthony Franco and Robb Wilson.
+   Licensed under CC BY-SA 4.0.
+   https://github.com/BadGuyFranco/wiser-method"
+
+For adapted works, also indicate that changes were made.
+
+TRADEMARK NOTICE
+
+"WISER Method" is a trademark (TM) of First Strategy, LLC.
+
+This license grants permission to use and adapt the methodology content.
+It does not grant permission to:
+
+  - Use the "WISER Method" name to imply official endorsement,
+    sponsorship, or affiliation with First Strategy, LLC
+  - Offer certification, accreditation, or credentialing using the
+    "WISER Method" name
+  - Represent yourself or your organization as an official WISER
+    Method practitioner, partner, or trainer without a separate
+    written agreement from First Strategy, LLC
+
+You may accurately describe your work as "based on the WISER Method"
+or "adapted from the WISER Method." You may not describe your work as
+"the WISER Method" or "WISER certified" without authorization.
+
+WHAT IS NOT LICENSED
+
+The following materials are NOT part of this repository and are NOT
+covered by this license. They remain the exclusive property of their
+respective rights holders under separate copyright:
+
+  - "The WISER Method" book (ISBN 979-8-218-93145-2)
+    by Anthony Franco and Robb Wilson
+  - All WISER training programs and delivery materials
+  - WISER certification and credentialing programs
+  - The WISER Assessment platform and its content
+  - Program contracts, proposals, and commercial agreements
+  - The Notion workspace and Google Sheets workbooks (hosted services
+    available at wisermethod.com/templates for personal use)
+
+FOUNDATION
+
+The WISER Method builds on AI First Principles, an open-source
+framework available at https://aifirstprinciples.org

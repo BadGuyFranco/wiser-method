@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WISER Reference Card: [Card Name]</title>
+  <link rel="stylesheet" href="shared/wiser-template.css">
+  <style>
+    /* Reference card: compact, information-dense, single page */
+    @page { size: letter; margin: 0.5in; }
+
+    body { font-size: var(--font-size-sm); line-height: 1.4; }
+
+    .page { max-width: 7.5in; }
+
+    .template-header__bar {
+      padding: var(--space-3) var(--space-4);
+    }
+
+    .template-header__meta {
+      padding: var(--space-2) var(--space-4);
+      gap: var(--space-4);
+    }
+
+    .template-header {
+      margin-bottom: var(--space-5);
+    }
+
+    h2 {
+      font-size: var(--font-size-md);
+      margin-top: var(--space-4);
+      margin-bottom: var(--space-2);
+      padding-bottom: var(--space-1);
+    }
+
+    h3 {
+      font-size: var(--font-size-base);
+      margin-top: var(--space-3);
+      margin-bottom: var(--space-2);
+    }
+
+    .section { margin-bottom: var(--space-4); }
+
+    /* Dense two-column layout for reference cards */
+    .ref-columns {
+      display: flex;
+      gap: var(--space-5);
+    }
+
+    .ref-columns > .ref-col {
+      flex: 1;
+    }
+
+    /* Quick reference items */
+    .ref-item {
+      margin-bottom: var(--space-3);
+      padding: var(--space-2) var(--space-3);
+      background: var(--color-light);
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--color-primary);
+    }
+
+    .ref-item__title {
+      font-weight: var(--font-weight-semibold);
+      font-size: var(--font-size-sm);
+      color: var(--color-primary);
+      margin-bottom: var(--space-1);
+    }
+
+    .ref-item__body {
+      font-size: var(--font-size-xs);
+      color: var(--color-dark);
+    }
+
+    /* Compact table for reference cards */
+    table { font-size: var(--font-size-xs); }
+    thead th { padding: var(--space-2) var(--space-3); }
+    tbody td { padding: var(--space-2) var(--space-3); }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ===== HEADER ===== -->
+    <header class="template-header">
+      <div class="template-header__bar">
+        <div class="template-header__logo">
+          <img src="shared/assets/wiser-owl.png" alt="WISER">
+          <span class="template-header__logo-text">WISER Method</span>
+        </div>
+        <div class="template-header__title-area">
+          <div class="template-header__title">[Reference Card Name]</div>
+          <div class="template-header__subtitle">Quick Reference</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT (Two columns) ===== -->
+    <div class="ref-columns">
+      <div class="ref-col">
+
+        <h2>[Category A]</h2>
+
+        <div class="ref-item">
+          <div class="ref-item__title">[Item Name]</div>
+          <div class="ref-item__body">[Concise description. Keep each reference item to 2-3 lines maximum for scannability.]</div>
+        </div>
+
+        <div class="ref-item">
+          <div class="ref-item__title">[Item Name]</div>
+          <div class="ref-item__body">[Concise description.]</div>
+        </div>
+
+        <div class="ref-item">
+          <div class="ref-item__title">[Item Name]</div>
+          <div class="ref-item__body">[Concise description.]</div>
+        </div>
+
+        <h2>[Category B]</h2>
+
+        <div class="ref-item">
+          <div class="ref-item__title">[Item Name]</div>
+          <div class="ref-item__body">[Concise description.]</div>
+        </div>
+
+      </div>
+
+      <div class="ref-col">
+
+        <h2>[Category C]</h2>
+
+        <table class="compact">
+          <thead>
+            <tr>
+              <th>[Col 1]</th>
+              <th>[Col 2]</th>
+              <th>[Col 3]</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>[Data]</td><td>[Data]</td><td>[Data]</td></tr>
+            <tr><td>[Data]</td><td>[Data]</td><td>[Data]</td></tr>
+            <tr><td>[Data]</td><td>[Data]</td><td>[Data]</td></tr>
+          </tbody>
+        </table>
+
+        <h2>[Category D]</h2>
+
+        <ul class="checklist">
+          <li>[Key point or check item]</li>
+          <li>[Key point or check item]</li>
+          <li>[Key point or check item]</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="template-footer mt-4">
+      <div class="template-footer__brand">
+        <span>WISER Method</span>
+      </div>
+      <a href="https://wisermethod.com/templates" class="template-footer__url">wisermethod.com/templates</a>
+    </footer>
+
+  </div>
+</body>
+</html>

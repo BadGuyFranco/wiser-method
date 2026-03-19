@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WISER Reference Card: Position Reference</title>
+  <link rel="stylesheet" href="../template-templates/shared/wiser-template.css">
+  <style>
+    /* Reference card: compact, information-dense, single page */
+    @page { size: letter; margin: 0.5in; }
+
+    body { font-size: var(--font-size-sm); line-height: 1.4; }
+
+    .page { max-width: 7.5in; }
+
+    .template-header__bar {
+      padding: var(--space-3) var(--space-4);
+    }
+
+    .template-header {
+      margin-bottom: var(--space-4);
+    }
+
+    h2 {
+      font-size: var(--font-size-md);
+      margin-top: var(--space-3);
+      margin-bottom: var(--space-2);
+      padding-bottom: var(--space-1);
+    }
+
+    h3 {
+      font-size: var(--font-size-base);
+      margin-top: var(--space-3);
+      margin-bottom: var(--space-1);
+    }
+
+    .section { margin-bottom: var(--space-3); }
+
+    /* Dense two-column layout for reference cards */
+    .ref-columns {
+      display: flex;
+      gap: var(--space-4);
+    }
+
+    .ref-columns > .ref-col {
+      flex: 1;
+    }
+
+    /* Quick reference items */
+    .ref-item {
+      margin-bottom: var(--space-2);
+      padding: var(--space-2) var(--space-3);
+      background: var(--color-light);
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--color-primary);
+    }
+
+    .ref-item__title {
+      font-weight: var(--font-weight-bold);
+      font-size: var(--font-size-sm);
+      color: var(--color-primary);
+      margin-bottom: 2px;
+    }
+
+    .ref-item__tensions {
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-accent);
+      margin-bottom: 2px;
+    }
+
+    .ref-item__body {
+      font-size: var(--font-size-xs);
+      color: var(--color-dark);
+      line-height: 1.35;
+    }
+
+    .ref-item__roles {
+      font-size: 8pt;
+      color: var(--color-muted);
+      font-style: italic;
+      margin-top: 2px;
+    }
+
+    /* Compact table for reference cards */
+    table { font-size: var(--font-size-xs); }
+    thead th { padding: var(--space-1) var(--space-2); font-size: 8pt; }
+    tbody td { padding: var(--space-1) var(--space-2); font-size: 8pt; }
+
+    .danger-note {
+      font-size: 8pt;
+      color: var(--color-accent);
+      font-weight: var(--font-weight-semibold);
+      margin-top: var(--space-2);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ===== HEADER ===== -->
+    <header class="template-header">
+      <div class="template-header__bar">
+        <div class="template-header__logo">
+          <img src="../template-templates/shared/assets/wiser-owl.png" alt="WISER">
+          <span class="template-header__logo-text">WISER Method</span>
+        </div>
+        <div class="template-header__title-area">
+          <div class="template-header__title">Position Reference Cards</div>
+          <div class="template-header__subtitle">Chapter 10 . Team Setup</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT (Two columns) ===== -->
+    <div class="ref-columns">
+      <div class="ref-col">
+
+        <h2>The Seven Positions</h2>
+
+        <div class="ref-item">
+          <div class="ref-item__title">Sponsor</div>
+          <div class="ref-item__tensions">Tensions: Authority, Stewardship</div>
+          <div class="ref-item__body">Owns objectives and resources. Decides whether the implementation is worth pursuing and has authority to make organizational changes. Cuts through decision stalls.</div>
+          <div class="ref-item__roles">Product owner, project sponsor, technical lead, founder, executive stakeholder</div>
+        </div>
+
+        <div class="ref-item">
+          <div class="ref-item__title">Architect</div>
+          <div class="ref-item__tensions">Tensions: Translation, Empathy</div>
+          <div class="ref-item__body">Makes the invisible visible. Documents systems so everyone can see how they work. Advocates for users when builders optimize for technical elegance. Owns the Playbook.</div>
+          <div class="ref-item__roles">UX researcher, product designer, service designer, systems thinker, product manager</div>
+        </div>
+
+        <div class="ref-item">
+          <div class="ref-item__title">Sage</div>
+          <div class="ref-item__tensions">Tension: Context</div>
+          <div class="ref-item__body">Understands why things are the way they are. Knows unwritten rules, historical constraints, and which "simple" changes broke things before. Prevents repeating past mistakes.</div>
+          <div class="ref-item__roles">Senior team member, domain expert, legacy system owner, long-tenured employee</div>
+        </div>
+
+        <div class="ref-item">
+          <div class="ref-item__title">Scout</div>
+          <div class="ref-item__tensions">Tension: Curiosity</div>
+          <div class="ref-item__body">The curious challenger. Asks questions others skip, designs experiments, ensures the team builds on evidence rather than consensus. Can block deployment when assumptions remain untested.</div>
+          <div class="ref-item__roles">Frontline worker, QA lead, research scientist, test engineer, user researcher</div>
+        </div>
+
+      </div>
+
+      <div class="ref-col">
+
+        <h2 style="visibility: hidden;">Positions (continued)</h2>
+
+        <div class="ref-item">
+          <div class="ref-item__title">Smith</div>
+          <div class="ref-item__tensions">Tension: Execution</div>
+          <div class="ref-item__body">Builds working systems. Translates designs into functioning software, surfaces ambiguity through building, and discovers what plans missed.</div>
+          <div class="ref-item__roles">Developer, engineer, technical lead, systems architect</div>
+        </div>
+
+        <div class="ref-item">
+          <div class="ref-item__title">Sentinel</div>
+          <div class="ref-item__tensions">Tension: Safety</div>
+          <div class="ref-item__body">Manages risk. Asks what could go wrong, ensures boundaries are defined, monitors for drift after deployment. Can veto deployment when safety criteria aren't met.</div>
+          <div class="ref-item__roles">Risk owner, compliance lead, security officer, finance representative</div>
+        </div>
+
+        <div class="ref-item">
+          <div class="ref-item__title">Guide</div>
+          <div class="ref-item__tensions">Tension: Integrity</div>
+          <div class="ref-item__body">Maintains method integrity. Ensures the team follows the Canons, facilitates key sessions, holds the process when pressure mounts to skip steps.</div>
+          <div class="ref-item__roles">Coach, facilitator, program manager, external consultant</div>
+        </div>
+
+        <h2>Dangerous Combinations</h2>
+
+        <table class="compact">
+          <thead>
+            <tr>
+              <th>Combination</th>
+              <th>Risk</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Smith + Sentinel</td><td>Builder overrides the risk manager</td></tr>
+            <tr><td>Sponsor + Sentinel</td><td>"I want this" overrides "this is safe"</td></tr>
+          </tbody>
+        </table>
+
+        <div class="info-box info-box--tip" style="padding: var(--space-2) var(--space-3); margin-bottom: var(--space-3);">
+          <div class="info-box__title" style="font-size: 8pt;">Team Sizing Rule</div>
+          <p style="font-size: 8pt; margin: 0;">Every tension needs exactly one owner. One person can hold multiple Positions if they have the skills and bandwidth. Below three people, you're missing the perspectives that catch blind spots.</p>
+        </div>
+
+        <div class="info-box info-box--warning" style="padding: var(--space-2) var(--space-3); margin-bottom: 0;">
+          <div class="info-box__title" style="font-size: 8pt;">Conflict Resolution</div>
+          <p style="font-size: 8pt; margin: 0;">When Position holders disagree, that's the system working. When it becomes gridlock, escalate to the Sponsor. If the Sponsor is a party, the Guide holds the process.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="template-footer mt-4">
+      <div class="template-footer__brand">
+        <img src="../template-templates/shared/assets/wiser-logo.png" alt="WISER">
+        <span>WISER Method</span>
+      </div>
+      <a href="https://wisermethod.com/templates" class="template-footer__url">wisermethod.com/templates</a>
+    </footer>
+
+  </div>
+</body>
+</html>

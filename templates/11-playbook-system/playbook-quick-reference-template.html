@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WISER Reference Card: Playbook Quick Reference</title>
+  <link rel="stylesheet" href="../template-templates/shared/wiser-template.css">
+  <style>
+    /* Reference card: compact, information-dense, single page */
+    @page { size: letter; margin: 0.5in; }
+
+    body { font-size: var(--font-size-sm); line-height: 1.3; }
+
+    .page { max-width: 7.5in; }
+
+    .template-header__bar {
+      padding: var(--space-2) var(--space-4);
+    }
+
+    .template-header {
+      margin-bottom: var(--space-3);
+    }
+
+    h2 {
+      font-size: var(--font-size-md);
+      margin-top: var(--space-2);
+      margin-bottom: var(--space-1);
+      padding-bottom: 2px;
+    }
+
+    .section { margin-bottom: var(--space-2); }
+
+    /* Dense two-column layout */
+    .ref-columns {
+      display: flex;
+      gap: var(--space-4);
+    }
+
+    .ref-columns > .ref-col {
+      flex: 1;
+    }
+
+    /* Compact table */
+    table { font-size: 8pt; margin-bottom: var(--space-2); }
+    thead th { padding: 3px var(--space-2); font-size: 8pt; }
+    tbody td { padding: 3px var(--space-2); font-size: 8pt; line-height: 1.3; }
+
+    .structure-table td:first-child {
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-primary);
+      white-space: nowrap;
+      width: 25%;
+    }
+
+    .structure-table td:nth-child(2) {
+      width: 50%;
+    }
+
+    .structure-table td:nth-child(3) {
+      color: var(--color-muted);
+      font-style: italic;
+      width: 25%;
+    }
+
+    /* Checklist overrides */
+    .checklist li {
+      font-size: 8pt;
+      padding: 3px 0 3px var(--space-6);
+      line-height: 1.3;
+    }
+
+    .checklist li::before {
+      width: 10px;
+      height: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ===== HEADER ===== -->
+    <header class="template-header">
+      <div class="template-header__bar">
+        <div class="template-header__logo">
+          <img src="../template-templates/shared/assets/wiser-owl.png" alt="WISER">
+          <span class="template-header__logo-text">WISER Method</span>
+        </div>
+        <div class="template-header__title-area">
+          <div class="template-header__title">Playbook Quick Reference</div>
+          <div class="template-header__subtitle">Chapter 11 . Playbook System</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT (Two columns) ===== -->
+    <div class="ref-columns">
+      <div class="ref-col">
+
+        <h2>Playbook Structure</h2>
+
+        <table class="compact structure-table">
+          <thead>
+            <tr>
+              <th>Section</th>
+              <th>What It Captures</th>
+              <th>When</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Metadata</td>
+              <td>Project name, team, dates, Playbook Keeper (the Architect)</td>
+              <td>Day one</td>
+            </tr>
+            <tr>
+              <td>Team Structure</td>
+              <td>Position assignments; who owns which tensions</td>
+              <td>Day one</td>
+            </tr>
+            <tr>
+              <td>Current State</td>
+              <td>What you observed during Witness; the baseline</td>
+              <td>Day one</td>
+            </tr>
+            <tr>
+              <td>Open Questions</td>
+              <td>Hypotheses to test in Interrogate; unknowns</td>
+              <td>Day one</td>
+            </tr>
+            <tr>
+              <td>Objectives</td>
+              <td>What success looks like; constraints on the solution space</td>
+              <td>After Witness</td>
+            </tr>
+            <tr>
+              <td>Risk Register</td>
+              <td>What could derail the project; impact and mitigation</td>
+              <td>Day one</td>
+            </tr>
+            <tr>
+              <td>Decision Log</td>
+              <td>Every significant decision with rationale and alternatives</td>
+              <td>First decision</td>
+            </tr>
+            <tr>
+              <td>Hierarchy of Agency</td>
+              <td>AI autonomous vs. human approval vs. human-only decisions</td>
+              <td>Solve</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="info-box info-box--tip" style="padding: var(--space-2) var(--space-3); margin-bottom: var(--space-2);">
+          <div class="info-box__title" style="font-size: 8pt;">Owner</div>
+          <p style="font-size: 8pt; margin: 0;">The Architect. Always. One person, clear accountability. On day one, your Playbook is mostly questions. By the end, it's mostly answers.</p>
+        </div>
+
+        <h2>Maintenance Rules</h2>
+
+        <ul class="checklist" style="margin-bottom: var(--space-2);">
+          <li>Update same-day, not "when we have time"</li>
+          <li>Every experiment result gets recorded</li>
+          <li>Every decision includes rationale</li>
+          <li>Version the Playbook for after-action reviews</li>
+        </ul>
+
+        <div class="info-box info-box--warning" style="padding: var(--space-2) var(--space-3); margin-bottom: 0;">
+          <div class="info-box__title" style="font-size: 8pt;">When It Becomes Bureaucracy</div>
+          <p style="font-size: 8pt; margin: 0;">If updates feel like homework, strip back to decisions and learnings only. Ask: what do we actually reference? Keep that. Archive everything else.</p>
+        </div>
+
+      </div>
+
+      <div class="ref-col">
+
+        <h2>Warning Signs</h2>
+
+        <table class="compact">
+          <thead>
+            <tr>
+              <th>Symptom</th>
+              <th>Problem</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Decisions get relitigated</td><td>Rationale not documented</td></tr>
+            <tr><td>Describes a different system than what's running</td><td>Updates deferred</td></tr>
+            <tr><td>New members can't onboard from it</td><td>Too fragmented or incomplete</td></tr>
+            <tr><td>Risk conversations start from scratch</td><td>Risk register not maintained</td></tr>
+            <tr><td>Nobody opens it between meetings</td><td>Compliance artifact, not working doc</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Playbook by Canon</h2>
+
+        <table class="compact">
+          <thead>
+            <tr>
+              <th>Canon</th>
+              <th>What Gets Added</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Witness</td><td>Current state, friction maps, user flows</td></tr>
+            <tr><td>Interrogate</td><td>Assumptions, experiment results, validated/invalidated</td></tr>
+            <tr><td>Solve</td><td>Solution design, pilot results, quality framework</td></tr>
+            <tr><td>Expand</td><td>Context assessments, deployment gates, scaling decisions</td></tr>
+            <tr><td>Refine</td><td>Hierarchy of agency, drift findings, incident responses</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Day-One Checklist</h2>
+
+        <ul class="checklist" style="margin-bottom: var(--space-2);">
+          <li>Project name and dates filled in</li>
+          <li>Position assignments documented</li>
+          <li>Current state captured (even 2-3 sentences)</li>
+          <li>Initial open questions listed</li>
+          <li>Known risks identified</li>
+          <li>Playbook Keeper (Architect) assigned</li>
+        </ul>
+
+        <div class="info-box info-box--tip" style="padding: var(--space-2) var(--space-3); margin-bottom: 0;">
+          <div class="info-box__title" style="font-size: 8pt;">The One-Minute Test</div>
+          <p style="font-size: 8pt; margin: 0;">When someone asks "why did we do it this way?", can you answer from the Playbook in under a minute? If not, something is missing.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="template-footer" style="margin-top: var(--space-3);">
+      <div class="template-footer__brand">
+        <img src="../template-templates/shared/assets/wiser-logo.png" alt="WISER">
+        <span>WISER Method</span>
+      </div>
+      <a href="https://wisermethod.com/templates" class="template-footer__url">wisermethod.com/templates</a>
+    </footer>
+
+  </div>
+</body>
+</html>

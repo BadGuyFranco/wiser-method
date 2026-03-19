@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WISER Template: Friction Map</title>
+  <link rel="stylesheet" href="../../template-templates/shared/wiser-template.css">
+  <style>
+    /* Friction Map specific: compact entries to fit 3 per page */
+    .friction-entry .field { margin-bottom: var(--space-2); }
+    .friction-entry .field__label { font-size: var(--font-size-xs); }
+    .friction-entry .field__input { padding: var(--space-1) 0; min-height: 1.4em; }
+    .friction-entry .field-row { gap: var(--space-4); margin-bottom: var(--space-2); }
+
+    .severity-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      margin-top: var(--space-2);
+    }
+    .severity-row span {
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-muted);
+    }
+    .severity-option {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      font-size: var(--font-size-xs);
+    }
+    .severity-option::before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      border: 1.5px solid var(--color-border);
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ===== HEADER ===== -->
+    <header class="template-header">
+      <div class="template-header__bar">
+        <div class="template-header__logo">
+          <img src="../../template-templates/shared/assets/wiser-owl.png" alt="WISER">
+          <span class="template-header__logo-text">WISER Method</span>
+        </div>
+        <div class="template-header__title-area">
+          <div class="template-header__title">Friction Map</div>
+          <div class="template-header__subtitle">Chapter 12 . Witness Phase</div>
+        </div>
+      </div>
+      <div class="template-header__meta">
+        <div class="template-header__meta-field">
+          <span class="template-header__meta-label">Process Name</span>
+          <span class="template-header__meta-value"></span>
+        </div>
+        <div class="template-header__meta-field">
+          <span class="template-header__meta-label">Date Range</span>
+          <span class="template-header__meta-value"></span>
+        </div>
+        <div class="template-header__meta-field">
+          <span class="template-header__meta-label">Observer(s)</span>
+          <span class="template-header__meta-value"></span>
+        </div>
+        <div class="template-header__meta-field">
+          <span class="template-header__meta-label">Sessions</span>
+          <span class="template-header__meta-value"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== INSTRUCTIONS ===== -->
+    <div class="info-box info-box--tip">
+      <div class="info-box__title">How to Use This Template</div>
+      <p>Observe the work happening before filling this out. Document what you see, not what people tell you happens. Each friction point should come from direct observation or validated interview data. Complete one entry per distinct friction point, then summarize on page 2.</p>
+    </div>
+
+    <!-- ===== FRICTION POINT ENTRIES ===== -->
+    <section class="section">
+      <h2>Friction Points</h2>
+
+      <!-- Entry 1 -->
+      <div class="entry friction-entry">
+        <div class="entry__number">Friction Point 1</div>
+        <div class="field-row">
+          <div class="field" style="flex: 2">
+            <label class="field__label">Name</label>
+            <div class="field__input"></div>
+          </div>
+          <div class="field" style="flex: 3">
+            <label class="field__label">Location in Process</label>
+            <div class="field__input"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field__label">Description</label>
+          <div class="field__input"></div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label class="field__label">Frequency</label>
+            <div class="field__input"></div>
+            <div class="field__hint">Daily / weekly / per transaction</div>
+          </div>
+          <div class="field">
+            <label class="field__label">Time Impact</label>
+            <div class="field__input"></div>
+            <div class="field__hint">Minutes or hours lost per occurrence</div>
+          </div>
+          <div class="field">
+            <label class="field__label">Who is Affected</label>
+            <div class="field__input"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field__label">Current Workaround</label>
+          <div class="field__input"></div>
+        </div>
+        <div class="field">
+          <label class="field__label">Root Cause Hypothesis</label>
+          <div class="field__input"></div>
+        </div>
+        <div class="field-row">
+          <div class="field" style="flex: 2">
+            <label class="field__label">Evidence Source</label>
+            <div class="field__input"></div>
+          </div>
+          <div class="field" style="flex: 1">
+            <div class="severity-row">
+              <span>Severity:</span>
+              <span class="severity-option">High</span>
+              <span class="severity-option">Med</span>
+              <span class="severity-option">Low</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 2 -->
+      <div class="entry friction-entry">
+        <div class="entry__number">Friction Point 2</div>
+        <div class="field-row">
+          <div class="field" style="flex: 2">
+            <label class="field__label">Name</label>
+            <div class="field__input"></div>
+          </div>
+          <div class="field" style="flex: 3">
+            <label class="field__label">Location in Process</label>
+            <div class="field__input"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field__label">Description</label>
+          <div class="field__input"></div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label class="field__label">Frequency</label>
+            <div class="field__input"></div>
+            <div class="field__hint">Daily / weekly / per transaction</div>
+          </div>
+          <div class="field">
+            <label class="field__label">Time Impact</label>
+            <div class="field__input"></div>
+            <div class="field__hint">Minutes or hours lost per occurrence</div>
+          </div>
+          <div class="field">
+            <label class="field__label">Who is Affected</label>
+            <div class="field__input"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field__label">Current Workaround</label>
+          <div class="field__input"></div>
+        </div>
+        <div class="field">
+          <label class="field__label">Root Cause Hypothesis</label>
+          <div class="field__input"></div>
+        </div>
+        <div class="field-row">
+          <div class="field" style="flex: 2">
+            <label class="field__label">Evidence Source</label>
+            <div class="field__input"></div>
+          </div>
+          <div class="field" style="flex: 1">
+            <div class="severity-row">
+              <span>Severity:</span>
+              <span class="severity-option">High</span>
+              <span class="severity-option">Med</span>
+              <span class="severity-option">Low</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 3 -->
+      <div class="entry friction-entry">
+        <div class="entry__number">Friction Point 3</div>
+        <div class="field-row">
+          <div class="field" style="flex: 2">
+            <label class="field__label">Name</label>
+            <div class="field__input"></div>
+          </div>
+          <div class="field" style="flex: 3">
+            <label class="field__label">Location in Process</label>
+            <div class="field__input"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field__label">Description</label>
+          <div class="field__input"></div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label class="field__label">Frequency</label>
+            <div class="field__input"></div>
+            <div class="field__hint">Daily / weekly / per transaction</div>
+          </div>
+          <div class="field">
+            <label class="field__label">Time Impact</label>
+            <div class="field__input"></div>
+            <div class="field__hint">Minutes or hours lost per occurrence</div>
+          </div>
+          <div class="field">
+            <label class="field__label">Who is Affected</label>
+            <div class="field__input"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field__label">Current Workaround</label>
+          <div class="field__input"></div>
+        </div>
+        <div class="field">
+          <label class="field__label">Root Cause Hypothesis</label>
+          <div class="field__input"></div>
+        </div>
+        <div class="field-row">
+          <div class="field" style="flex: 2">
+            <label class="field__label">Evidence Source</label>
+            <div class="field__input"></div>
+          </div>
+          <div class="field" style="flex: 1">
+            <div class="severity-row">
+              <span>Severity:</span>
+              <span class="severity-option">High</span>
+              <span class="severity-option">Med</span>
+              <span class="severity-option">Low</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary Table -->
+    <section class="section">
+      <h2>Friction Summary</h2>
+
+      <table class="writable">
+        <thead>
+          <tr>
+            <th style="width: 25%">Friction Point</th>
+            <th style="width: 15%">Frequency</th>
+            <th style="width: 18%">Impact / Occurrence</th>
+            <th style="width: 18%">Daily Total Impact</th>
+            <th style="width: 12%">Severity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+
+      <!-- Severity criteria -->
+      <div class="info-box info-box--note">
+        <div class="info-box__title">Severity Rating Criteria</div>
+        <p>
+          <span class="badge badge--high">High</span> More than 30 minutes/day total impact across all occurrences.<br>
+          <span class="badge badge--medium">Medium</span> 10 to 30 minutes/day total impact.<br>
+          <span class="badge badge--low">Low</span> Less than 10 minutes/day total impact.
+        </p>
+      </div>
+    </section>
+
+    <!-- Patterns -->
+    <section class="section">
+      <h2>Patterns Observed</h2>
+      <p class="text-muted text-sm mb-2">What themes or connections do you see across friction points?</p>
+      <div class="field">
+        <div class="field__input field__input--tall" style="min-height: 5em;"></div>
+      </div>
+    </section>
+
+    <!-- Priority -->
+    <section class="section">
+      <h2>Recommended Priority</h2>
+      <p class="text-muted text-sm mb-4">Rank the friction points that should be addressed first. Consider total impact, feasibility, and alignment with project objectives.</p>
+
+      <ol class="steps">
+        <li>
+          <strong>Highest Priority</strong>
+          <div class="field mt-2">
+            <div class="field__input"></div>
+            <div class="field__hint">Which friction point and why?</div>
+          </div>
+        </li>
+        <li>
+          <strong>Second Priority</strong>
+          <div class="field mt-2">
+            <div class="field__input"></div>
+            <div class="field__hint">Which friction point and why?</div>
+          </div>
+        </li>
+        <li>
+          <strong>Third Priority</strong>
+          <div class="field mt-2">
+            <div class="field__input"></div>
+            <div class="field__hint">Which friction point and why?</div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Pitfalls -->
+    <div class="info-box info-box--warning">
+      <div class="info-box__title">Common Pitfalls</div>
+      <p>Documenting symptoms instead of root causes. Relying only on what managers say happens instead of observing directly. Skipping the time-impact quantification (this is what turns observations into business cases). Confusing minor inconveniences with genuine friction that blocks work.</p>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="template-footer">
+      <div class="template-footer__brand">
+        <img src="../../template-templates/shared/assets/wiser-logo.png" alt="WISER">
+        <span>WISER Method</span>
+      </div>
+      <a href="https://wisermethod.com/templates" class="template-footer__url">wisermethod.com/templates</a>
+    </footer>
+
+  </div>
+</body>
+</html>
