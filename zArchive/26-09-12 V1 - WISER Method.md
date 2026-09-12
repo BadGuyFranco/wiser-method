@@ -160,4 +160,4 @@ Teams operating on WISER gain four capabilities they lacked before:
 
 ---
 
-*The WISER Method by Anthony Franco and Robb Wilson is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). WISER Method is a trademark of EffectiveSC.*
+*The WISER Method by Anthony Franco and Robb Wilson is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). WISER Method is a trademark of First Strategy, LLC.*
